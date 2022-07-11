@@ -3,7 +3,7 @@ import { MouseEvent, useState } from 'react';
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import { useSnapshot } from "valtio";
-import store from "../store/store";
+import store, { generateCar } from "../store/store";
 import LikeButton from '../components/LikeButton';
 import Foot from '../components/Foot';
 
@@ -51,6 +51,7 @@ const Cars: NextPage = () => {
                         <input value={year} onChange={e => setYear(parseInt(e.target.value))} className={styles.input} type="number" name="year" />
                     </label>
                     <p onClick={handleClick} className={styles.button}>Add Car</p>
+                    <p onClick={generateCar} className={styles.button}>Add random Car</p>
                 </form>
 
                 <div className={styles.grid}>
