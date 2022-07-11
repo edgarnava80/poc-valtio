@@ -3,9 +3,7 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import { useSnapshot } from "valtio";
 import store from "../store/store";
-import Card from '../components/Card';
 import LikeButton from '../components/LikeButton';
-import Link from 'next/link';
 import Foot from '../components/Foot';
 
 const Home: NextPage = () => {

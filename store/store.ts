@@ -9,7 +9,6 @@ interface ICar {
 interface IStore {
     likes: number;
     cars: ICar[];
-    //getAverageTemperature: () => number;
 }
 
 const store: IStore = proxy<IStore>({ likes: 0, cars: [{ make: 'Toyota', model: 'Corolla', year: 2020 }] });
@@ -27,7 +26,7 @@ export function generateCar() {
 }
 
 subscribe(store, () => {
-    console.log('store changed');
+    console.table(store.cars);
 }
 );
 
