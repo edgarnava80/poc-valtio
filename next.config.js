@@ -2,6 +2,12 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    loader: 'akamai',
+    path: ''
+  },
+  basePath: '/poc-valtio',
+  assetPrefix: '/poc-valtio'
 }
 
 module.exports = nextConfig
